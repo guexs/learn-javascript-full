@@ -7,6 +7,7 @@
   <title>Estructuras de Control</title>
 </head>
 <body>
+  <h1>Estructuras de control</h1>
   <script>
     /*
     //Condicionales
@@ -169,7 +170,80 @@
   let a1 = 11;
 
   console.log((a1 >= 12) ? 'Hola Amigo todo bien?' : 'AAAAAAAAAAAAAAAAA');
+//Bucle While:
+let i = 0;
+while(i < 3) {
+  console.log(i);
+  i++;
+  //código
+  //cuerpo del bucle
+}
+let a = 4;
+while(a) {
+  console.log(a);
+  a--;
+}
+
+let b = 12;
+while(b) {
+  console.log(b);
+  b--;
+}
+
+let c = 34;
+while(c < 35) {
+  console.log(c);
+  c++;
+}
+
+let e = 10;
+do {
+  console.log(e);
+  e++;
+} while (e < 12);
+
+
+//for(begin; condition; step) {
+  //cuerpo del bucle
+//}
+//Inicializar la variable i
+//Comprobar la condicion para saber si es verdadera o falsa
+//Si es falsa, el bucle no se ejecuta
+//Si es verdadera la condicion, se ejecuta el cuerpo
+//Ejecucion del cuerpo y se incrementa o decrementa la variable i, cada vez que ocurre una iteracion.
+//Una vez que la condicion sea falsa, el bucle terminará
+for(let i = 1; i <= 5; i++) {
+  console.log('Hoy es: ' + i + ' de Abril');
+}
 */
+console.log('Hola');
+
+let numeros = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+for(i = 0; i < numeros.length; i++) {
+  console.log(numeros[i]);
+}
+
+const jon = {
+  nombre: 'Jhon',
+  apellido: 'Mircha',
+  edad: 35
+};
+
+for (const propiedad in jon) {
+  console.log(`Key ${propiedad}, Value: ${jon[propiedad]}`);
+}
+
+for (const elemento of numeros) {
+  console.log(elemento);
+}
+
+let cadena = "Hola Mundo";
+
+for (const character of cadena) {
+  console.log(character);
+}
+
   </script>
 </body>
 </html>
