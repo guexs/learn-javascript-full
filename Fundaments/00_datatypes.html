@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Types of Javascript</title>
+</head>
+<body>
+  <script>
+    /*
+    let nombre = "Jon";
+    let apellido = 'Mircha';
+
+    //concatenacion
+    let saludo = 'Hola, mi nombre es ' + nombre + " " + apellido + "."
+    console.log(saludo)
+
+    //interpolacion de variables
+    //Template String
+    let saludo2 = `Hola mi nombre es ${nombre}, ${apellido}.`
+    console.log(saludo2)
+
+    let ul = "<ul><li>Primavera</li><li>Verano</li><li>Otoño</li><li>Invierno</li></ul>";
+
+    console.log(ul)
+
+    let ul2 = `
+  <ul>
+    <li>Primavera</li>
+    <li>Verano</li>
+    <li>Otoño</li>
+    <li>Invierno</li>
+  </ul>`
+    console.log(ul2)
+
+
+  let ul3 = "<ul>";
+    ul3 += "<li>Primavera</li>";
+    ul3 += "<li>Verano</li>"
+    ul3 += "<li>Otoño</li>"
+    ul3 += "<li>Invierno</li>"
+    ul3 += "</ul>"
+    console.log(ul3)
+
+
+    let a = 2;
+    let b = new Number(1);
+    let c = 7.19;
+    let d = "5.6";
+
+    console.log(a, b)
+    console.log(c.toFixed(1))
+    console.log(c.toFixed(5))
+    console.log(parseInt(c))
+    console.log(parseFloat(c))
+    console.log(a+b) // a-b, a*b, a/b
+    console.log(c+parseInt(d))
+    console.log(c+parseFloat(d))
+    console.log(c+Number.parseInt(d))
+    console.log(c+Number.parseFloat(d))
+    
+    let verdadero = true;
+    let falso = false;
+    let v = Boolean(true);
+    let f = Boolean(false);
+
+    console.log(verdadero, falso, v, f);
+    console.log(typeof verdadero, typeof falso);
+
+    console.log(Boolean(0));
+    console.log(Boolean(-7));
+    console.log(Boolean(""));
+    console.log(Boolean(" "));
+
+
+    //undefined indica que no se inicio una variable y el valor esta ausente
+    let indefinida;
+    console.log(indefinida);
+
+    //valor especial que indica la ausencia de un valor
+    let nulo = null;
+    console.log(nulo);
+
+    //NaN - Not a Number
+    let noEsUnNumero = "hola" * 3.7;
+    console.log(noEsUnNumero);
+    //Declaración de función
+
+    function estoEsUnaFuncion() {
+      console.log("Uno");
+      console.log("Dos");
+      console.log("Tres");
+    }
+
+    //Invocación de Función
+    //estoEsUnaFuncion();
+    //estoEsUnaFuncion();
+    //estoEsUnaFuncion();
+    //estoEsUnaFuncion();
+
+    function unaFuncionQueDevuelveValor() {
+      console.log('Uno');
+      return 19;
+      console.log('Dos');
+      console.log('Tres');
+      return "La funcion ha retornado una cadena de texto";
+    }
+
+    //let valorDeFuncion = unaFuncionQueDevuelveValor();
+    //console.log(valorDeFuncion);
+
+    function saludar(nombre = "Desconocido", edad = 0) {
+      console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años.`);
+    }
+
+   // saludar("Kenai", 7);
+    //saludar();
+
+    //funciones declaradas vs funciones expresadas
+    funcionDeclarada();
+
+
+    function funcionDeclarada() {
+      console.log("Esto es una funcion declarada puede invocarse en cualquier parte de nuestro codigo incluso antes de que la funcion sea declarada");
+    }
+
+    funcionDeclarada();
+
+    //función anonima
+    //funcionExpresada()
+    const funcionExpresada = function() {
+      console.log("Esto es una funcion expresada, es decir, una funcion que se le ha asignado un valor a una variabl, si invocamos esta funcion antes de su definicion javascript nos dirá...'Uncaught ReferenceError: Cannot access 'funcionExpresada' before initialization'");
+    }
+    funcionExpresada();
+
+    const a = [];
+  const b = [1, true, "Hola", ["A", "B", "C", [1, 2, 3]]];
+  console.log(a);
+  console.log(b);
+  console.log(b.length);
+  console.log(b[2]);
+  console.log(b[0]);
+  console.log(b[3][3][0]);
+
+  const c = Array.of("x", "y", "z", 9, 8 ,7);
+  console.log(c);
+
+  const d = Array(100).fill(false);
+  console.log(d);
+
+  const e = new Array();
+  console.log(e);
+
+  const f = new Array(1, 2, 3, true, false);
+  console.log(f);
+
+  const colores = ["Rojo", "Verde", "Azul"];
+  console.log(colores);
+
+  colores.push('Negro');
+  console.log(colores);
+
+  colores.pop();
+  console.log(colores);
+
+  colores.forEach(function (el, index) {
+    console.log(`<li id="${index}">${el}</li>`)
+  });
+  let a = new String("Hola");
+  console.log(a);
+
+  //Objetos - coleccion de llaves/valores
+  const b = {
+
+  }
+
+  console.log(b);
+
+  const c = new Object();
+  console.log(c)
+
+
+  //dentro de un objeto a las variables se le llamaran atributos/propiedades y a las funciones metodos.
+  const jon = {
+    nombre: "Jon",
+    apellido: "MirCha",
+    edad: 35,
+    pasatiempos: ["Correr", "Hacer Ejercicios", "Dar Clases"],
+    soltero: false,
+    contacto: {
+      email: "jonmircha@gmail.com",
+      twitter: "@jonmircha",
+      movil: "5212345678"
+    },
+    saludar: function () {
+     console.log(`Hola :)`);
+    },
+    decirMiNombre: function () {
+      console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años y me puedes seguir como ${this.contacto.twitter} en twitter.`)
+    }
+  }
+
+  console.log(jon);
+  console.log(jon["nombre"]);
+  console.log(jon["apellido"]);
+  console.log(jon["edad"]);
+  console.log(jon.nombre);
+  console.log(jon.apellido);
+  console.log(jon.edad);
+  console.log(jon.soltero);
+  console.log(jon.pasatiempos);
+  console.log(jon.pasatiempos[0]);
+  console.log(jon.contacto);
+  console.log(jon.contacto.twitter);
+  jon.saludar();
+  jon.decirMiNombre();
+
+  console.log(Object.keys(jon));
+  console.log(Object.values(jon));
+  console.log(jon.hasOwnProperty("nombre"));
+  console.log(jon.hasOwnProperty("nacimiento"));
+  */
+  </script>
+</body>
+</html>
