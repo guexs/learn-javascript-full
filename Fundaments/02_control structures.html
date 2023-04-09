@@ -215,7 +215,7 @@ do {
 for(let i = 1; i <= 5; i++) {
   console.log('Hoy es: ' + i + ' de Abril');
 }
-*/
+
 console.log('Hola');
 
 let numeros = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
@@ -243,6 +243,35 @@ let cadena = "Hola Mundo";
 for (const character of cadena) {
   console.log(character);
 }
+*/
+
+try {
+  console.log("En el try se agrega el codigo a evaluar");
+  console.log("Segundo mensaje en el try");
+  noExiste;
+  console.log('Otro mensaje');
+} catch (error) {
+  console.log("Catch, captura cualquier error surgido o lanzado en el try");
+  console.log(error);
+}finally {
+  console.log('El bloque Finally se ejecutara siempre al final de un bloque try-catch');
+}
+
+
+try {
+  let numero = "y";
+
+  if(isNaN(numero)) {
+    throw new Error("El caracter introducido no es un número");
+  }
+
+  console.log(numero * numero);
+} catch(error) {
+  console.log(`Se produjo el siguiente error: ${error}`);
+}
+
+
+
 
   </script>
 </body>
